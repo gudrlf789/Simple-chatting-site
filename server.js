@@ -1,11 +1,11 @@
 let express = require('express');
 let app = express();
 let http = require('http').Server(app);
-let io = require('socket-io')(http);
+let io = require('socket.io')(http);
 let sweetalert = require('sweetalert');
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname, '/client.html');
+    res.sendFile(__dirname + '/client.html');
 });
 
 let count=1;
